@@ -4,6 +4,9 @@ class Artist
   attr_accessor :name
   attr_reader :songs
 
+  extend reset_all
+  extend count
+
   @@artists = []
 
   def self.find_by_name(name)
