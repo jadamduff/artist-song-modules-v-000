@@ -1,12 +1,10 @@
 require 'pry'
-require_relative '../lib/concerns/memorable'
 
 class Artist
   attr_accessor :name
   attr_reader :songs
 
-  extend reset_all
-  extend count
+  extend Memorable
 
   @@artists = []
 
